@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/Inheritance.dir/src/useful.cpp.o  -o Inheritance -rdynamic 

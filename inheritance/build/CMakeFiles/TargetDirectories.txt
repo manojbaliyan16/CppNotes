@@ -1,3 +1,0 @@
-/home/manojk16/git_manoj/src/cpp/inheritance/build/CMakeFiles/edit_cache.dir
-/home/manojk16/git_manoj/src/cpp/inheritance/build/CMakeFiles/rebuild_cache.dir
-/home/manojk16/git_manoj/src/cpp/inheritance/build/CMakeFiles/Inheritance.dir
