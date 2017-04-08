@@ -2,29 +2,33 @@
 #include "../inc/useful.h"
 using namespace std;
 
-class Y{
-int i;
-X x;//embedded Object or composition, generally Embedded Object is Private 
+class Y:public X{
+int i; //different from X's i
+// no need of embedded Object
 public:
 Y(){
 	i=0;
 }
+int change(){
+	i=premute();//This is How we can call to Different Name function Call Of class X 
+	return i;
+}
 
-void f(int ii){
+void set(int ii){
 	i=ii;
-	x.set(ii);
+	X::set(ii);// This is how we can call the Same name Fucntion Call 
 }
-int g() const{
 
-	return i*x.read();
-}
-void permute(){
-	x.premute();
-}
 };
 int main(){
-	Y y;
-	y.f(47);
-	y.permute();
+cout << "Size Of (X)==" << sizeof(X) << endl;
+cout << "Size Of (Y)==" << sizeof(Y) << endl;
+Y D;
+D.change();
+// X's funciton Interface Comes Through
+D.read();
+D.premute();
+//Redefined functions Hide base Version 
+D.set(12);
 }
 
