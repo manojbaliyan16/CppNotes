@@ -20,6 +20,7 @@ void set(int ii){
 }
 
 };
+/*
 int main(){
 cout << "Size Of (X)==" << sizeof(X) << endl;
 cout << "Size Of (Y)==" << sizeof(Y) << endl;
@@ -31,4 +32,5 @@ D.premute();
 //Redefined functions Hide base Version 
 D.set(12);
 }
+*/
 
