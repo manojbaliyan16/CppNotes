@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/manojk16/git_manoj/src/cpp/inheritance/inc/useful.h
+
+/home/manojk16/git_manoj/src/cpp/inheritance/src/useful.cpp
+iostream
+-
+../inc/useful.h
+/home/manojk16/git_manoj/src/cpp/inheritance/inc/useful.h
+
