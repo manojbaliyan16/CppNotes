@@ -3,7 +3,7 @@ using namespace std;
 enum note{MiddleC, CSharp, Cflat};
 class Instrument{
 public:
-	void play(note) const{
+	virtual void play(note) const{
 		cout<<"Instrument Play Note"<<endl;
 	}
 };
