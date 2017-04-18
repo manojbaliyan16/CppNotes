@@ -29,7 +29,7 @@ class Traingle:public Shape{
 		cout<<"Drawn Traingle"<<endl;
 	}
 };*/
-void describe(Shape t){
+void describe(Shape& t){
 	t.draw();
 	
 }
