@@ -22,7 +22,8 @@ public:
       favoriteActivity;
   }
 };
-
+// /When passing by value, the copy-constructor for a Pet object is used, which initializes the VPTR to the Pet VTABLE and copies only the Pet parts of the object. There’s no explicit copy-constructor here, 
+//so the compiler synthesizes one. Under all interpretations, the object truly becomes a Pet during slicing.
 void describe(Pet p) { // Slices the object
   cout << p.description() << endl;
 }
