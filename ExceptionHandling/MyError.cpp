@@ -15,7 +15,7 @@ int main(){
 		cout<<"In Try\n";
 		f();
 	}
-	catch(MyError){
+	catch(MyError	){
 		cout<<"Exception Catched\n";
 	}
 }
