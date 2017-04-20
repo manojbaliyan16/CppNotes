@@ -16,6 +16,7 @@ int main(){
 	}
 	catch(...){
 		cout<<"caught Trouble\n";
+		throw;
 	}
 	
 }
