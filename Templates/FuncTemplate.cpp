@@ -29,7 +29,7 @@ template <typename T>
     	sum+=array[count];
     }
     sum /=length;
-    return length;
+    return sum;
 }
 class Cents
 {
@@ -62,8 +62,10 @@ public:
         m_cents /= value;
     }
 };
-int main(){
-	Cents array3[]={Cents(5),Cents(10),Cents(15),Cents(14)};
-	cout<<average(array3,4);
-	//std::cout<<bigger<<'\n';
+int main()
+{
+    Cents array3[] = { Cents(5), Cents(10), Cents(15), Cents(14) };
+    std::cout << average(array3, 4) << '\n';
+ 
+    return 0;
 }
