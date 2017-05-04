@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8.9)
+project(Array)
+include_directories(IncArray)
+file(GLOB SOURCES "ArraySrc/*.cpp")
+add_executable(Array ${SOURCES})
