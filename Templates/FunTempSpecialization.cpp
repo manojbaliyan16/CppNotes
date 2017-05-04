@@ -1,3 +1,7 @@
+/*
+Simple Template Class 
+
+*/
 #include <iostream>
 template <class T>
 
@@ -10,12 +14,21 @@ public:
 		m_value=value;
 	}
 	~Storage(){
-		
+
 	}
-void print(){
-	std::cout<<m_value<<'\n';
-}	
+	void print();
+/*void print(){
+	std::cout<<"manoj"<<m_value<<'\n';
+}	*/
 };
+template<>
+void Storage<int>::print(){
+	std::cout<<"manoj"<<m_value<<'\n';
+}	
+template <>
+void Storage<double>::print(){
+	std::cout << std::scientific << m_value << '\n';
+}
 
 int main(){
 	Storage<int> nvalue(5);
