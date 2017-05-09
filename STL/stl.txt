@@ -1,0 +1,32 @@
+STL is a collection of liraries that provides templated container algorithm and Iterator
+STL Container : 
+STL has many different classes which asically falls in to three category 
+(1.) Sequence Container: That maintain the odering of the element in the container 
+(i) Vector
+Example : vectorEx.cpp 
+(ii) dequeue Dynamic array which can grow in both direction:
+example: 	
+(iii) A list is a special type of sequence contianer which is similiar to the double linked list 
+(2) Associative Container : 
+Associative container are the container which automatically sort the input which input is inserted in to these at any order. Associative container compare the element using operator < 
+(a) set: set is a unique container that store unique element, with dublicate element disallowed. The element are stored according to thier values. 
+(b) multiset : It is a set where duplicate elements are allowed.
+(c) Map is an Associative container is called associative array where each element is a pair with key value pair, The key is used for sortinf and storing the data, the value is the actual data.
+
+
+Container Adapter: 
+Container Adapter are special type of container which can be used in the form of any associative container they are like 
+STACK 
+queue 
+Priority Queue
+STL iterator: 
+An Iterator is an Object which can traverse over a container class without the user having to know how it is implemented.
+Each Iterator having for basic memeber function 
+begin(): Returns an iterator that representing begning of the element in to container
+end(): 
+cbegin():returns the const iterator 	
+cend()
+Finally are container provides two types of the iterator:
+container::iterator provides a read/write 	iterator
+container :: const-iterator provides read only iterator
+
