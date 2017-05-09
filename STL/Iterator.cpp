@@ -1,16 +1,17 @@
 #include <iostream>
 #include <vector>
+#include <list>
 
 int main(int argc, char const *argv[])
 {
-	std::vector<int> vect;
+	std::list<int> li;
 	for (int i = 0; i < 6; ++i)
 	{
-		vect.push_back(i);
+		li.push_back(i);
 	}
-std::vector<int>::iterator it;
-it=vect.begin();
-while(it!=vect.end())
+std::list<int>::iterator it;
+it=li.begin();
+while(it!=li.end())
 {
 	std::cout << *it <<" ";
 	it++;
