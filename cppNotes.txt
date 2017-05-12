@@ -1,8 +1,0 @@
-Template expression parameters
-Expression parameters:
-A template expression parameter is a special type of parameter that does not substitute for a type, but is instead replaced by a value. 
-An expression parameter can be any of the following:
-A value that has an integral type or enumeration
-A pointer or reference to a class object
-A pointer or reference to a function
-A pointer or reference to a class member function
