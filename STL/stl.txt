@@ -29,4 +29,6 @@ cend()
 Finally are container provides two types of the iterator:
 container::iterator provides a read/write 	iterator
 container :: const-iterator provides read only iterator
+STL algorithms : 
+STL also provides a  number of algorithms like search, sort, traversing, reverse, insert etc.
 
