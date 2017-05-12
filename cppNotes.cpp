@@ -54,5 +54,55 @@ means if a new constructor is defined then copy constructor is invoked else copy
 	Usually c++ require provids the defination whatever you are declaring
 
 	const int classname::variablename;
-	pasge number 35
-	const int GamePlayer::NumTurns; 
+	enum hack 
+class GamePlayer{
+	enum {num=5};
+	int score[num]; // it behaves more like a #define then like a const 
+};
+it is legal to take the address of the const but to take the address of enum or define is not legal
+Qus: If you dont want to let people get a pointer or refernce of your Integral const then what you will do 
+Ans : enum is the best answer 
+Things to Remember
+✦ For simple constants, prefer const objects or enums to #defines.
+✦ For function-like macros, prefer inline functions to #defines
+
+for const object means particular object should not be modified and compiler enforce this restrcition.
+ compiler is to follow the restriction that the object will remain invariant when communication is going on 
+ bewtween function or program 
+ const is versaltile out side the class it can be used for static or name space and inside the class it can be used for 
+ static and non static data_member
+
+ you can ensure that weather pointer is const or data it points to is const or both or niether 
+
+ char greeting[]="hello" //nothing is const 
+ 						// no const pointer
+ 						// no const data
+
+ 	const char* p=greeting; //no const poniter 		
+ 							// but const data means "hello" can't be modified 
+ 	char* const p=greeting; // no const data 
+ 							// const pointer
+
+ 	const char* const p=greeting;
+ 	if the const appers to the left of * what pointed will be const but if const appers to be the right of * the poniters itself is const.
+
+ 		here const char* p=greeting;
+ 		or char const* p=greeting; both are same;
+
+
+const to fucntion declartion 
+class Rational{};
+const Rational operator*(const Rational& lhs, const Rational& rhs);
+Now question is why function should return const value 
+Ans: 
+if we function return value is not const then client would be able to commit atroctities like below 
+Rational a, b, c;
+(a*b)=c; which will invoke = operator on the result of a*b!
+
+
+const member function:
+The purpose of const memeber function is which memeber function is to be invoked on const objects. 
+one of the fundamental way to improve the c++ performance is to increase is the pass object by refernce to const 
+it is good that never modify return value of function which return built in type
+
+
