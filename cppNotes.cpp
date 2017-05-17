@@ -166,3 +166,49 @@ static object distructor is called when main finishes its execution.
 
 Chapter 2:	
 Constructor, distructor & Assignment operator:
+
+What are functions c++ sliently write and Calls 
+class Empty{
+public:
+	Empty(){} 
+	Empty(const Empty& rhs){}
+	~Empty(){}
+	Empty& operator=(const Empty& rhs){} //copy assignment operator
+};
+
+Empty e1;// defualt ctor and dtor will be invoke
+Empty e2(e1)//copy ctor invoked 
+e2=e1; //copy assignemt operator
+Empty e3;
+e3=e1;//
+
+
+If user writting the own ctor in the repective class then compiler will not override this decision 
+so out of four onnly those function will be added by compiler which required 
+template<typename T>
+class NamedObject{
+public:
+	NamedObject(string& name, const T& value); //no assignement  = declared
+private:
+	string& nameValue;
+	const T objectValue;
+};
+// Consider What should happen there 
+string NewDog("Moti");
+string OldDog("Tiger");
+NamedObject<int> p(NewDog,2); When I wrote this i.e NMoti has her 2nd bithday
+NamedObject<int> s(oldDog,36); // And here Tiger is of 36 
+if I wrote 
+p=s;
+what should happen to datamemer of p 
+as we have taken string& namevalue and Now we are trying to change reference which is refering to Moti to the 
+
+Tiger. 
+*************************************************************************
+C++ doesnot provide a way to make refernce refer to the different object 
+	i.e object is not directly involve in this assignment 
+	Compilers may implicitly generate a class’s default constructor, copy
+constructor, copy assignment operator, and destructor.
+***************************************************************************
+
+Item 6:	
