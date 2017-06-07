@@ -1,3 +1,10 @@
+
+What is function ptr 
+how to call the function using function ptr 
+how to pass the funcion as the argument of function 
+Defualt parameter ?
+what do you mean by typedef
+
 Template expression parameters
 Expression parameters:
 A template expression parameter is a special type of parameter that does not substitute for a type, but is instead replaced by a value. 
