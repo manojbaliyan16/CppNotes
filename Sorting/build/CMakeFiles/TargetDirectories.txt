@@ -1,0 +1,3 @@
+/home/baliyan/manoj-git/Sorting/build/CMakeFiles/edit_cache.dir
+/home/baliyan/manoj-git/Sorting/build/CMakeFiles/rebuild_cache.dir
+/home/baliyan/manoj-git/Sorting/build/CMakeFiles/Sorting.dir

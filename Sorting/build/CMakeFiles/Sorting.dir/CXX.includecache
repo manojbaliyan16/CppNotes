@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/SortingUtils.hpp
+algorithm
+-
+iostream
+-
+vector
+-
+
+/home/baliyan/manoj-git/Sorting/src/BubbleSort.cpp
+iostream
+-
+vector
+-
+SortingUtils.hpp
+/home/baliyan/manoj-git/Sorting/src/SortingUtils.hpp
+
