@@ -5,13 +5,24 @@
  *      Author: baliyan
  */
 #include <iostream>
-
+using namespace std;
 class Test{
 	int i;
 public:
-	Test():i(10){}
+	Test():i(0){}
+	Test(int value):i(value){}
+	Test(const Test &other){
+		cout << "copy Constructor "<<endl;
+		i=other.i;
+	}
+	Test& operator=(const Test &other){
+		cout << " Assignemnt Operaor "<<endl;
+		i=other.i;
+		return *this;
+	}
 	Test& operator++()
 		{
+			cout << "PreIncrementOverloading"<<endl;
 		Test test;
 
 		test.i=++i;
@@ -25,14 +36,24 @@ public:
 };
 int main()
 {
-	Test obj1,obj2;
+	/*Test obj1,obj2;
 	obj1.display();
 	obj2.display();
 	obj2=++obj1;
 	obj1.display();
 	obj2.display();
 	++obj1;
+	obj1.display();*/
+	Test obj1(10);
+	Test obj2(20);
+	Test obj3=obj2;
+	obj1=obj2=obj3;
+	++obj3;
+	obj3.display();
+	obj2.display();
 	obj1.display();
+	obj2=++obj3;
+	obj3.display();
 }
 
 
