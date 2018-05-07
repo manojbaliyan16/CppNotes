@@ -10,7 +10,16 @@
 class Test{
 	int i;
 public:
-	Test():i(10){}
+	Test():i(0){}
+	Test(int value):i(value){}
+	Test(const Test &other){
+		i=other.i;
+	}
+	Test& operator=(const Test & obj){
+		i=obj.i;
+		return *this;
+
+	}
 	Test operator++(int)
 		{
 			Test test;
@@ -25,13 +34,18 @@ public:
 
 int main()
 {
-	Test obj1, obj2;
+	/*Test obj1, obj2;
 	obj1.display();
 	obj2.display();
 	obj1=obj2++;
 	obj1.display();
 	obj2.display();
-
+*/
+	Test obj1(20);
+	Test obj2(30);
+	obj1=obj2++;
+	obj1.display();
+	obj2.display();
 
 }
 
