@@ -26,8 +26,9 @@ public:
 bool Singleton::IsSingle = false;
 Singleton* Singleton::single = NULL;
 Singleton* Singleton::getInsatnce() {
-	single = new Singleton();
+	
 	if (!IsSingle) {
+		single = new Singleton();
 		IsSingle = true;
 		return single;
 	} else
@@ -44,5 +45,7 @@ int main() {
 	ptr1->method();
 	ptr2 = Singleton::getInsatnce();
 	ptr2->method();
+	// print the address of both pointer 
+	cout << ptr1 << " ::: " <<  ptr2 <<endl;
 
 }
